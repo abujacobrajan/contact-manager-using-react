@@ -51,9 +51,12 @@ input{
     display: flex;
     align-items: center;
 }
-.deleteButton{
+.deleteIcon{
     position: absolute;
     right: 5px;
+    width: 25px;
+    height: 25px;
+
     
 }
 .contactImage{

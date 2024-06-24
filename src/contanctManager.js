@@ -1,8 +1,8 @@
 
 import React, { useState } from "react";
-import { FaTrash } from 'react-icons/fa';
 import ContactManagerCSS from "./contactManager.module.css";
 import defaultContactImage from './contact-img.png'
+import deleteIcon from './delete-icon.png'
 
 const ContactManager = () => {
     const [name, setName] = useState('');
@@ -54,9 +54,7 @@ const ContactManager = () => {
                           <img src={defaultContactImage} alt="contact" className={ContactManagerCSS.contactImage}/>
                             {contact.name}<br/>
                             {contact.email}
-                            <button className={ContactManagerCSS.deleteButton} onClick={() => deleteContact(index)}>
-                                <FaTrash />
-                            </button>
+                            <img src={deleteIcon} alt="Delete" className={ContactManagerCSS.deleteIcon} onClick={() => deleteContact(index)} />
                         </li>
                     ))}
                 </ul>
